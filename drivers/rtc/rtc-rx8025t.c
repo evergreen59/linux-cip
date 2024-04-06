@@ -339,10 +339,9 @@ errout:
 	return err;
 }
 
-static int rx8025_remove(struct i2c_client *client)
+static void rx8025_remove(struct i2c_client *client)
 {
 	rx8025_sysfs_unregister(&client->dev);
-	return 0;
 }
 
 static const struct of_device_id __maybe_unused rx8025_dt_ids[] = {
